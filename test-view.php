@@ -1,37 +1,49 @@
-<?php
-include "includes/header.php";
-include "db/dbconnect.php"
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="row">
-    <?php
-    $query = "SELECT * FROM whatsapp_groups";
-    $query_run = mysqli_query($conn, $query);
-    $check_groups = mysqli_num_rows($query_run) > 0;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="test.css">
+</head>
 
-    if ($check_groups) {
-        while ($row = mysqli_fetch_array($query_run)) {
-    ?>
-            <div class="col-md-4">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <img src="../images/logo.jfif" width="150px" height="150px" alt="whatsapp group">
-                        <h3 class="class-title"><?php echo $row["g_name"]; ?></h3>
-                        <p class="class-text"><?php echo $row["g_descript"]; ?></p>
-                        <h5 class="class-link"><a href="<?php echo $row["g_link"]; ?>">Join Here</a></h5>
-                    </div>
-                </div>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-cogs"></i> Manage Groups</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="container">
+                <a class="logo" href="#">Dashboard</a>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
             </div>
-    <?php
-        }
-    } else {
-        echo "No Whatsapp Group Found!";
-    }
-    ?>
-</div>
+        </nav>
 
+        <div class="container">
+            <h1>Welcome to the Admin Dashboard</h1>
+            <p>This is a placeholder content for the main section.</p>
+        </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Admin Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 
-<?php
-include "includes/footer.php";
-?>
+</html>
