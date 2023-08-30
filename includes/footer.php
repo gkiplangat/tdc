@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <p>&copy; 2023 Car Showroom. All rights reserved.</p>
+                    <p>&copy; 2023 TDC Kenya. All rights reserved.</p>
                 </div>
             </div>
         </div>
